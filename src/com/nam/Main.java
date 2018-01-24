@@ -1,22 +1,27 @@
 package com.nam;
 
+//import com.nam.Box42;
+
 public class Main {
 
     public static void main(String[] args) throws java.io.IOException{
 	// write your code here
         System.out.println("Hello World Motherfucka");
 
-        int nums[] = {4, 8, 15, 16, 32, 64, 128, 256, 516, 1024, 2048, 4096, 8105, 16325};
+        Box42 mybox = new Box42();
 
-        int sum = 0;
+        System.out.println("Box = " + mybox.toString());
 
-        int k = 0;
+        System.out.println("Box w= " + mybox.weight);
 
-        for(int x: nums){
-            sum += x;
-            System.out.println(k++ + " x = " + x);
-        }
+        mybox.weight = 100500.42;
 
-        System.out.println("\nSum = " + sum);
+        System.out.println("Box w= " + mybox.weight);
+
+        mybox = null;
+
+        mybox = new Box42();
+
+
     }
 }
